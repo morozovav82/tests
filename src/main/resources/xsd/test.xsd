@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Main">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="RoleType" name="RoleType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="RoleType">
+    <xs:sequence>
+      <xs:element name="roleId" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+</xs:schema>
