@@ -17,9 +17,10 @@ public class JacksonConfig {
     @Bean
     @Primary
     public ObjectMapper jacksonObjectMapper() {
-        XmlMapper xmlMapper = new XmlMapper();
+        XmlMapper xmlMapper = XmlMapper.xmlBuilder()
+                .defaultUseWrapper(false)
+                .build();
         xmlMapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
-        xmlMapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
         xmlMapper.registerModule(new JaxbAnnotationModule());
         return xmlMapper;
     }
