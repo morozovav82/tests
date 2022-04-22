@@ -6,7 +6,7 @@
   <xs:element name="Main">
     <xs:complexType>
       <xs:sequence>
-        <xs:element type="xs:string" name="id" minOccurs="1"/> <!-- TODO тесты должны давать ошибку, если этого поля нет, но ошибки нет :( -->
+        <xs:element type="xs:string" name="ID" minOccurs="1"/>
         <xs:element type="RoleType" name="RoleType"/>
       </xs:sequence>
     </xs:complexType>
